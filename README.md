@@ -24,22 +24,24 @@ An interactive five-page Power BI dashboard analyzing grocery sales, product per
 4. Delivery Performance – Delivery time, status, and operational efficiency.
 5. Business Insights – Revenue trends, growth metrics, and category contributions.
 
+
 ## Dashboard Screenshots
 
 ### 1. Overview
-![Overview](01_Overview.jpeg)
+![Overview](01_Overview.png)
 
 ### 2. Product Analysis
-![Product Analysis](02_Product_Analysis.jpeg)
+![Product Analysis](02_Product_Analysis.png)
 
 ### 3. Customer Analysis
-![Customer Analysis](03_Customer_Analysis.jpeg)
+![Customer Analysis](03_Customer_Analysis.png)
 
 ### 4. Delivery Performance
-![Delivery Performance](04_Delivery_Performance.jpeg)
+![Delivery Performance](04_Delivery_Performance.png)
 
 ### 5. Business Insights
-![Business Insights](05_Business_Insights.jpeg)
+![Business Insights](05_Business_Insights.png)
+
 ## Key Business Insights
 - Delhi recorded the highest order volume, approximately 1.8K orders.
 - UPI accounted for approximately 43.53% of orders.
