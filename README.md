@@ -99,3 +99,45 @@ The model also includes a disconnected `Revenue Time Filter` parameter table for
 - Uses one-to-many relationships between dimension and fact tables.
 - Supports analysis across geographical, product, and time dimensions.
 - Provides a structured foundation for interactive Power BI reporting.
+
+
+## DAX Measures & Calculations
+
+The Power BI dashboard uses DAX measures to calculate key business KPIs, evaluate performance, and analyze sales trends.
+
+### Key DAX Measures
+
+| Measure | DAX Formula | Purpose |
+|---|---|---|
+| Total Orders | `DISTINCTCOUNT(Orders[Order ID])` | Counts unique orders |
+| Total Revenue | `SUM(Orders[Gross Sales])` | Calculates total gross sales |
+| Average Order Value | `DIVIDE([Total Revenue], [Total Orders])` | Calculates average gross sales per order |
+| Items Sold | `SUM(Orders[Quantity])` | Calculates total items sold |
+| Average Delivery Time | `AVERAGE(Orders[Delivery Time (mins)])` | Measures average delivery time |
+| Average Rating | `AVERAGE(Orders[Rating])` | Calculates average customer rating |
+
+### Advanced DAX Analysis
+
+Additional measures support:
+
+- Year-over-Year (YoY) revenue growth
+- Quarter-over-Quarter (QoQ) revenue growth
+- Previous-year and previous-quarter sales comparisons
+- Latest-quarter growth analysis
+- Product ranking using `RANKX`
+- Revenue contribution percentages using `ALLSELECTED`
+- Delivery-time distribution analysis
+
+## Dynamic Revenue Time Filter
+
+A Power BI field parameter allows users to switch the revenue trend visual between monthly, quarterly, and yearly views.
+
+```dax
+Revenue Time Filter = {
+    ("Monthly", NAMEOF('Calendar1'[Month Year]), 0),
+    ("Quarterly", NAMEOF('Calendar1'[Year Quarter]), 1),
+    ("Yearly", NAMEOF('Calendar1'[Year]), 2)
+}
+```
+
+This feature improves dashboard interactivity and enables flexible time-based revenue analysis.
