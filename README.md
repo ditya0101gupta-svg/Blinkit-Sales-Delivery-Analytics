@@ -51,3 +51,25 @@ An interactive five-page Power BI dashboard analyzing grocery sales, product per
 
 ## Project Objective
 To transform transactional grocery delivery data into actionable business insights through an interactive business intelligence dashboard.
+
+
+## Row-Level Security (RLS)
+
+Implemented static Row-Level Security (RLS) in Power BI Desktop to demonstrate role-based data access.
+
+**Security Configuration:**
+- Role Name: `Delhi_Only`
+- Table: `Cities`
+- Column: `City`
+- Filter Condition: `City = "Delhi"`
+
+**Testing and Validation:**
+- Tested the security role using Power BI Desktop's **View as** feature.
+- Verified that only Delhi appeared in the Cities slicer.
+- Confirmed that dashboard KPIs reflected the Delhi-filtered data.
+- Delhi-filtered revenue: approximately ₹855.55K.
+- Delhi-filtered orders: approximately 2K.
+
+**Purpose:** Demonstrates how Row-Level Security can restrict report data visibility based on assigned roles.
+
+*Note: RLS was implemented and tested locally in Power BI Desktop; it has not been deployed to Power BI Service.*
