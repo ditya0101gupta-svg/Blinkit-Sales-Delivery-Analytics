@@ -73,3 +73,29 @@ Implemented static Row-Level Security (RLS) in Power BI Desktop to demonstrate r
 **Purpose:** Demonstrates how Row-Level Security can restrict report data visibility based on assigned roles.
 
 *Note: RLS was implemented and tested locally in Power BI Desktop; it has not been deployed to Power BI Service.*
+
+
+## Data Model & Relationships
+
+The Power BI data model follows a star-schema-style design, with the `Orders` table serving as the central fact table.
+
+### Table Relationships
+
+| Dimension Table | Fact Table | Cardinality |
+|---|---|---|
+| Cities | Orders | One-to-Many (1:*) |
+| Products | Orders | One-to-Many (1:*) |
+| Calendar1 | Orders | One-to-Many (1:*) |
+
+The model also includes a disconnected `Revenue Time Filter` parameter table for report interactions and a `README` table.
+
+### Data Model Diagram
+
+![Power BI Data Model](Data_Model.png)
+
+### Model Design
+
+- Organizes order data using related city, product, and calendar tables.
+- Uses one-to-many relationships between dimension and fact tables.
+- Supports analysis across geographical, product, and time dimensions.
+- Provides a structured foundation for interactive Power BI reporting.
